@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">StoryApps</string>
+    <string name="signup">Daftar</string>
+    <string name="login">Masuk</string>
+    <string name="message_welcome_page">Ingin menulis dan berbagi cerita menarik? Temukan dunia penuh inspirasi di StoryApps!</string>
+    <string name="title_welcome_page">Selamat datang di StoryApps!</string>
+    <string name="title_signup_page">Lengkapi data dirimu di bawah ini ya</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="message_login_page">Masukkan dulu datamu ya</string>
+    <string name="title_login_page">Sudah siap untuk menulis dan berbagi cerita menarik?</string>
+    <string name="name">Nama</string>
+    <string name="message_main_page">Selamat Membuat Cerita.</string>
+    <string name="greeting">Halo %1$s,</string>
+    <string name="logout">Keluar</string>
+    <string name="error_size">Password tidak boleh kurang dari 8 karakter</string>
+    <string name="error_email">Harap Masukkan Email Yang Valid</string>
+    <string name="home">Home</string>
+    <string name="upload">Upload</string>
+    <string name="success_upload">Story Berhasil Di Upload</string>
+    <string name="failed_upload"><![CDATA[Upload Gagal, Harap Upload Gambar & Berikan Deskripsi]]></string>
+    <string name="photo_preview">Preview Foto\n</string>
+    <string name="camera">Kamera</string>
+    <string name="galery">Gallery</string>
+    <string name="title_story">Judul</string>
+    <string name="description_story">Deskripsi</string>
+    <string name="detail_image">Detail Image</string>
+    <string name="login_image">Login Image</string>
+    <string name="sign_up_image">Sign Up Image</string>
+    <string name="welcome_image">Welcome Image</string>
+    <string name="image_story">Image Story</string>
+</resources>
