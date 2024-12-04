@@ -5,9 +5,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.dicoding.picodiploma.loginwithanimation.data.di.AuthInjection
 import com.dicoding.picodiploma.loginwithanimation.data.repository.AuthRepository
-import com.dicoding.picodiploma.loginwithanimation.view.ui.login.LoginViewModel
+import com.dicoding.picodiploma.loginwithanimation.view.ui.auth.login.LoginViewModel
 import com.dicoding.picodiploma.loginwithanimation.view.ui.main.MainViewModel
-import com.dicoding.picodiploma.loginwithanimation.view.ui.signup.SignUpViewModel
+import com.dicoding.picodiploma.loginwithanimation.view.ui.auth.signup.SignUpViewModel
 
 class AuthViewModelFactory(private val repository: AuthRepository) : ViewModelProvider.NewInstanceFactory() {
     @Suppress("UNCHECKED_CAST")

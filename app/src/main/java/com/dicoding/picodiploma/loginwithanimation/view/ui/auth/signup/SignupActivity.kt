@@ -1,4 +1,4 @@
-package com.dicoding.picodiploma.loginwithanimation.view.ui.signup
+package com.dicoding.picodiploma.loginwithanimation.view.ui.auth.signup
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
@@ -13,7 +13,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.picodiploma.loginwithanimation.databinding.ActivitySignupBinding
 import com.dicoding.picodiploma.loginwithanimation.view.factory.AuthViewModelFactory
-import com.dicoding.picodiploma.loginwithanimation.view.ui.login.LoginActivity
+import com.dicoding.picodiploma.loginwithanimation.view.ui.auth.login.LoginActivity
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignupBinding

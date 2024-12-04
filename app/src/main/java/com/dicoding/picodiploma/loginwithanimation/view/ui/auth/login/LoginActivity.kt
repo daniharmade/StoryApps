@@ -1,4 +1,4 @@
-package com.dicoding.picodiploma.loginwithanimation.view.ui.login
+package com.dicoding.picodiploma.loginwithanimation.view.ui.auth.login
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator

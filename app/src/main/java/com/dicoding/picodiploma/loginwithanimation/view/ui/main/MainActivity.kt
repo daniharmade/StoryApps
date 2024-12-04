@@ -11,8 +11,8 @@ import androidx.fragment.app.Fragment
 import com.dicoding.picodiploma.loginwithanimation.R
 import com.dicoding.picodiploma.loginwithanimation.databinding.ActivityMainBinding
 import com.dicoding.picodiploma.loginwithanimation.view.factory.AuthViewModelFactory
-import com.dicoding.picodiploma.loginwithanimation.view.ui.home.HomeFragment
-import com.dicoding.picodiploma.loginwithanimation.view.ui.upload.UploadFragment
+import com.dicoding.picodiploma.loginwithanimation.view.ui.dashboard.home.HomeFragment
+import com.dicoding.picodiploma.loginwithanimation.view.ui.dashboard.upload.UploadFragment
 import com.dicoding.picodiploma.loginwithanimation.view.ui.welcome.WelcomeActivity
 
 class MainActivity : AppCompatActivity() {

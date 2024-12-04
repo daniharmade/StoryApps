@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.dicoding.picodiploma.loginwithanimation.data.response.StoryDetail
 import com.dicoding.picodiploma.loginwithanimation.databinding.ItemStoryBinding
-import com.dicoding.picodiploma.loginwithanimation.view.ui.detail.DetailActivity
+import com.dicoding.picodiploma.loginwithanimation.view.ui.dashboard.detail.DetailActivity
 
 class StoryListAdapter :
     ListAdapter<StoryDetail, StoryListAdapter.StoryViewHolder>(DIFF_CALLBACK) {

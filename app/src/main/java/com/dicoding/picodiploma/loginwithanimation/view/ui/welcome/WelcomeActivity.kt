@@ -10,8 +10,8 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.picodiploma.loginwithanimation.databinding.ActivityWelcomeBinding
-import com.dicoding.picodiploma.loginwithanimation.view.ui.login.LoginActivity
-import com.dicoding.picodiploma.loginwithanimation.view.ui.signup.SignUpActivity
+import com.dicoding.picodiploma.loginwithanimation.view.ui.auth.login.LoginActivity
+import com.dicoding.picodiploma.loginwithanimation.view.ui.auth.signup.SignUpActivity
 
 class WelcomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWelcomeBinding

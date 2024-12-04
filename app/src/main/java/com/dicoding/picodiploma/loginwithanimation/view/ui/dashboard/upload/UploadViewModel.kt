@@ -1,4 +1,4 @@
-package com.dicoding.picodiploma.loginwithanimation.view.ui.upload
+package com.dicoding.picodiploma.loginwithanimation.view.ui.dashboard.upload
 
 import androidx.lifecycle.ViewModel
 import com.dicoding.picodiploma.loginwithanimation.data.repository.AppRepository

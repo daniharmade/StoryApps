@@ -1,4 +1,4 @@
-package com.dicoding.picodiploma.loginwithanimation.view.ui.home
+package com.dicoding.picodiploma.loginwithanimation.view.ui.dashboard.home
 
 import android.os.Bundle
 import android.view.LayoutInflater

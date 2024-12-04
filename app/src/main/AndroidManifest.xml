@@ -11,17 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginWithAnimation" >
         <activity
-            android:name=".view.ui.detail.DetailActivity"
+            android:name=".view.ui.dashboard.detail.DetailActivity"
             android:exported="false"
             android:theme="@style/Theme.LoginWithAnimation" />
         <activity
             android:name=".view.ui.welcome.WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".view.ui.signup.SignUpActivity"
+            android:name=".view.ui.auth.signup.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".view.ui.login.LoginActivity"
+            android:name=".view.ui.auth.login.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".view.ui.main.MainActivity"

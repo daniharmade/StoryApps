@@ -1,4 +1,4 @@
-package com.dicoding.picodiploma.loginwithanimation.view.ui.upload
+package com.dicoding.picodiploma.loginwithanimation.view.ui.dashboard.upload
 
 import android.net.Uri
 import android.os.Bundle
@@ -19,7 +19,7 @@ import com.dicoding.picodiploma.loginwithanimation.data.pref.reduceFileImage
 import com.dicoding.picodiploma.loginwithanimation.data.pref.uriToFile
 import com.dicoding.picodiploma.loginwithanimation.databinding.FragmentUploadBinding
 import com.dicoding.picodiploma.loginwithanimation.view.factory.StoryViewModelFactory
-import com.dicoding.picodiploma.loginwithanimation.view.ui.home.HomeFragment
+import com.dicoding.picodiploma.loginwithanimation.view.ui.dashboard.home.HomeFragment
 import com.dicoding.picodiploma.loginwithanimation.view.ui.main.MainActivity
 
 class UploadFragment : Fragment() {

@@ -1,4 +1,4 @@
-package com.dicoding.picodiploma.loginwithanimation.view.ui.home
+package com.dicoding.picodiploma.loginwithanimation.view.ui.dashboard.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

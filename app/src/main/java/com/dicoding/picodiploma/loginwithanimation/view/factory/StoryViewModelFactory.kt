@@ -5,8 +5,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.dicoding.picodiploma.loginwithanimation.data.di.AppInjection
 import com.dicoding.picodiploma.loginwithanimation.data.repository.AppRepository
-import com.dicoding.picodiploma.loginwithanimation.view.ui.home.HomeViewModel
-import com.dicoding.picodiploma.loginwithanimation.view.ui.upload.UploadViewModel
+import com.dicoding.picodiploma.loginwithanimation.view.ui.dashboard.home.HomeViewModel
+import com.dicoding.picodiploma.loginwithanimation.view.ui.dashboard.upload.UploadViewModel
 
 class StoryViewModelFactory(private val repository: AppRepository) : ViewModelProvider.Factory {
     @Suppress("UNCHECKED_CAST")
