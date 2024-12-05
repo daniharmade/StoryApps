@@ -1,9 +1,16 @@
 package com.dicoding.picodiploma.loginwithanimation.data.repository
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.PagingData
+import androidx.paging.liveData
 import com.dicoding.picodiploma.loginwithanimation.data.pref.Result
+import com.dicoding.picodiploma.loginwithanimation.data.pref.StoryPagingSource
 import com.dicoding.picodiploma.loginwithanimation.data.pref.UserPreferences
 import com.dicoding.picodiploma.loginwithanimation.data.response.PostResponse
+import com.dicoding.picodiploma.loginwithanimation.data.response.StoryDetail
 import com.dicoding.picodiploma.loginwithanimation.data.response.StoryResponse
 import com.dicoding.picodiploma.loginwithanimation.data.retrofit.story.StoryService
 import com.google.gson.Gson
@@ -18,9 +25,10 @@ class AppRepository(
     private val storyService: StoryService,
     private val userPreference: UserPreferences
 ) {
-    suspend fun getStories(): Result<StoryResponse> {
+
+    suspend fun getStoriesWithLocation(): Result<StoryResponse> {
         return try {
-            val response = storyService.getStoryList()
+            val response = storyService.getStoryListLocation(1)
             if (!response.error) {
                 Result.DataSuccess(response)
             } else {
@@ -31,8 +39,19 @@ class AppRepository(
             val errorResponse = Gson().fromJson(errorBody, PostResponse::class.java)
             Result.DataError(errorResponse.message)
         } catch (e: Exception) {
-            Result.DataError("Load Stories failed")
+            Result.DataError("Can't get location")
         }
+    }
+
+    fun getStoryPagingSource(): LiveData<PagingData<StoryDetail>> {
+        return Pager(
+            config = PagingConfig(
+                pageSize = 10
+            ),
+            pagingSourceFactory = {
+                StoryPagingSource(storyService)
+            }
+        ).liveData
     }
 
     fun uploadImage(imageFile: File, description: String) = liveData {
@@ -53,7 +72,6 @@ class AppRepository(
             emit(Result.DataError(errorResponse.message))
         }
     }
-
 
     companion object {
         fun getInstance(

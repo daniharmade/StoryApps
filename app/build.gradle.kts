@@ -3,6 +3,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-parcelize")
     id("com.google.devtools.ksp") version "1.9.24-1.0.20"
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
 android {
@@ -66,4 +67,19 @@ dependencies {
     ksp("androidx.room:room-compiler:2.5.2")
 
     implementation("com.github.bumptech.glide:glide:4.15.1")
+
+    implementation("com.google.android.gms:play-services-maps:19.0.0")
+
+    implementation("com.google.android.gms:play-services-location:21.3.0")
+
+    implementation("androidx.paging:paging-runtime-ktx:3.3.0")
+
+    androidTestImplementation("androidx.core:core-testing:2.1.0") // InstantTaskExecutorRule
+    androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1") // TestDispatcher
+
+    testImplementation("androidx.core:core-testing:2.1.0") // InstantTaskExecutorRule
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1") // TestDispatcher
+    testImplementation("org.mockito:mockito-core:4.4.0")
+    testImplementation("org.mockito:mockito-inline:4.4.0")
+
 }

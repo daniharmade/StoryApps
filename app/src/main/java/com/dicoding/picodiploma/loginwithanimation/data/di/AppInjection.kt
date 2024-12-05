@@ -14,7 +14,6 @@ object AppInjection {
         val user = runBlocking { userPreference.getLoginSession().first() }
         val apiService = StoryConfig.getApiService(user.token)
 
-
         return AppRepository(apiService, userPreference)
     }
 }

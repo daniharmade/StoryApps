@@ -29,4 +29,12 @@
     <string name="sign_up_image">Sign Up Image</string>
     <string name="welcome_image">Welcome Image</string>
     <string name="image_story">Image Story</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="maps">Maps</string>
+    <string name="normal_type">Normal</string>
+    <string name="satellite_type">Satelilite</string>
+    <string name="terrain_type">Terrain</string>
+    <string name="hybrid_type">Hybrid</string>
+    <string name="error_maps">Failed Get Maps Location</string>
+    <string name="retry">Try Again</string>
 </resources>
