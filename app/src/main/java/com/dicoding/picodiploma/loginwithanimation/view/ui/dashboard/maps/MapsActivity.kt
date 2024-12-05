@@ -1,12 +1,13 @@
 package com.dicoding.picodiploma.loginwithanimation.view.ui.dashboard.maps
 
+import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import com.dicoding.picodiploma.loginwithanimation.R
 import com.dicoding.picodiploma.loginwithanimation.data.pref.UserPreferences
 import com.dicoding.picodiploma.loginwithanimation.data.pref.dataStore
-
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -16,9 +17,9 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.dicoding.picodiploma.loginwithanimation.databinding.ActivityMapsBinding
 import com.dicoding.picodiploma.loginwithanimation.view.factory.StoryViewModelFactory
 import com.google.android.gms.maps.model.LatLngBounds
+import com.google.android.gms.maps.model.MapStyleOptions
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
-
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
     private val bound = LatLngBounds.Builder()
@@ -43,8 +44,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mapFragment.getMapAsync(this)
 
         setupMaps()
-
-
     }
 
     private fun setupMaps() {
@@ -68,6 +67,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     mMap.mapType = GoogleMap.MAP_TYPE_HYBRID
 
                 }
+
                 else -> {
 
                 }
@@ -81,10 +81,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.uiSettings.isZoomControlsEnabled = true
 
         moveToUSRCampus()
+        setMapStyle()
 
         viewModel.loadStoriesWithLocation()
-        viewModel.storiesLocation.observe(this){storyLocation ->
-            storyLocation.forEach{story ->
+        viewModel.storiesLocation.observe(this) { storyLocation ->
+            storyLocation.forEach { story ->
                 val latLng = LatLng(story.lat ?: 0.0, story.lon ?: 0.0)
                 googleMap.addMarker(
                     MarkerOptions()
@@ -97,7 +98,23 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     private fun moveToUSRCampus() {
-        val unriCampus = LatLng(0.510440, 101.438309)
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(unriCampus, 20f))
+        val USRCampus = LatLng(0.510440, 101.438309)
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(USRCampus, 20f))
+    }
+
+    private fun setMapStyle() {
+        try {
+            val success =
+                mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.map_style))
+            if (!success) {
+                Log.e(TAG, "Style parsing failed.")
+            }
+        } catch (exception: Resources.NotFoundException) {
+            Log.e(TAG, "Can't find style. Error: ", exception)
+        }
+    }
+
+    companion object {
+        private const val TAG = "MapsActivity"
     }
 }
