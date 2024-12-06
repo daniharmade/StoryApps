@@ -4,10 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.dicoding.picodiploma.loginwithanimation.data.pref.Result
 import com.dicoding.picodiploma.loginwithanimation.data.repository.AppRepository
 import com.dicoding.picodiploma.loginwithanimation.data.response.StoryDetail
 import kotlinx.coroutines.launch
-import com.dicoding.picodiploma.loginwithanimation.data.pref.Result
 
 class MapsViewModel(private val repository: AppRepository) : ViewModel() {
 
@@ -19,15 +19,15 @@ class MapsViewModel(private val repository: AppRepository) : ViewModel() {
 
     private val _errorMessage = MutableLiveData<String?>()
     val errorMessage: LiveData<String?> = _errorMessage
-    fun loadStoriesWithLocation(){
+    fun loadStoriesWithLocation() {
         viewModelScope.launch {
             try {
                 val response = repository.getStoriesWithLocation()
 
-                if (response is Result.DataSuccess){
+                if (response is Result.DataSuccess) {
                     val storyLocationResponse = response.data
                     _storiesLocation.value = storyLocationResponse.listStory
-                }else if (response is Result.DataError){
+                } else if (response is Result.DataError) {
                     _errorMessage.value = response.error
                 }
             } catch (e: Exception) {

@@ -20,16 +20,16 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel by viewModels<HomeViewModel> {
-        StoryViewModelFactory.getInstance(requireContext())
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    private val viewModel by viewModels<HomeViewModel> {
+        StoryViewModelFactory.getInstance(requireContext())
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -39,7 +39,7 @@ class HomeFragment : Fragment() {
         val layoutManager = LinearLayoutManager(requireContext())
         binding.rvStory.layoutManager = layoutManager
 
-        binding.mapsButton.setOnClickListener{
+        binding.mapsButton.setOnClickListener {
             startActivity(Intent(requireContext(), MapsActivity::class.java))
         }
 

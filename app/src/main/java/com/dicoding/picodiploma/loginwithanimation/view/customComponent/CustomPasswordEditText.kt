@@ -11,16 +11,22 @@ import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.content.ContextCompat
 import com.dicoding.picodiploma.loginwithanimation.R
 
-class CustomPasswordEditText: AppCompatEditText, View.OnTouchListener {
+class CustomPasswordEditText : AppCompatEditText, View.OnTouchListener {
     private lateinit var errorIcon: Drawable
 
     constructor(context: Context) : super(context) {
         init()
     }
+
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         init()
     }
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
         init()
     }
 

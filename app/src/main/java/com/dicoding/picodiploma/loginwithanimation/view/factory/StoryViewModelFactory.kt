@@ -16,17 +16,21 @@ class StoryViewModelFactory(private val repository: AppRepository) : ViewModelPr
             modelClass.isAssignableFrom(HomeViewModel::class.java) -> {
                 HomeViewModel(repository) as T
             }
+
             modelClass.isAssignableFrom(UploadViewModel::class.java) -> {
                 UploadViewModel(repository) as T
             }
+
             modelClass.isAssignableFrom(MapsViewModel::class.java) -> {
                 MapsViewModel(repository) as T
             }
+
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }
     }
 
     companion object {
-        fun getInstance(context: Context) = StoryViewModelFactory(AppInjection.provideRepository(context))
+        fun getInstance(context: Context) =
+            StoryViewModelFactory(AppInjection.provideRepository(context))
     }
 }

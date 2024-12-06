@@ -1,23 +1,23 @@
 package com.dicoding.picodiploma.loginwithanimation.view.ui.dashboard.maps
 
 import android.content.res.Resources
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.picodiploma.loginwithanimation.R
 import com.dicoding.picodiploma.loginwithanimation.data.pref.UserPreferences
 import com.dicoding.picodiploma.loginwithanimation.data.pref.dataStore
+import com.dicoding.picodiploma.loginwithanimation.databinding.ActivityMapsBinding
+import com.dicoding.picodiploma.loginwithanimation.view.factory.StoryViewModelFactory
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
-import com.dicoding.picodiploma.loginwithanimation.databinding.ActivityMapsBinding
-import com.dicoding.picodiploma.loginwithanimation.view.factory.StoryViewModelFactory
 import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.MapStyleOptions
+import com.google.android.gms.maps.model.MarkerOptions
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var mMap: GoogleMap

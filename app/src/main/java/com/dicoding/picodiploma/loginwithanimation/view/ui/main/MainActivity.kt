@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         AuthViewModelFactory.getInstance(this)
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)

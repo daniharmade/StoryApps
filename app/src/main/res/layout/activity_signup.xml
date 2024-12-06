@@ -12,11 +12,11 @@
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
+        android:contentDescription="@string/sign_up_image"
         app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
-        android:contentDescription="@string/sign_up_image"
         app:srcCompat="@drawable/image_signup" />
 
     <TextView
@@ -99,12 +99,12 @@
         app:startIconDrawable="@drawable/ic_baseline_email_24"
         tools:alpha="100">
 
-<com.dicoding.picodiploma.loginwithanimation.view.customComponent.CustomEmailEditText
-    android:id="@+id/emailEditText"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:ems="10"
-    android:inputType="textEmailAddress" />
+        <com.dicoding.picodiploma.loginwithanimation.view.customComponent.CustomEmailEditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -173,5 +173,4 @@
         android:layout_height="64dp"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.1" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
